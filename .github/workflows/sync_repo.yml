@@ -25,7 +25,7 @@ jobs:
         uses: repo-sync/github-sync@v2
         if: env.PAT
         with:
-          source_repo: "https://github.com/qukaiyuan/JD_AUTO_SCRIPT.git"
+          source_repo: "https://github.com/NoOne-hub/test_resp.git"
           source_branch: "master"
           destination_branch: "master"
           github_token: ${{ secrets.PAT }}
