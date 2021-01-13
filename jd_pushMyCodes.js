@@ -78,7 +78,7 @@ const codeArr = [
   { type: 'jdzz', code: 'Sv_56QBca8V3SJR2b1A', api: codeApi2 },
   { type: 'jdzz', code: 'S-ak0EmhIgwuvVVKH7ZU', api: codeApi2 },
   { type: 'jdcrazyjoy', code: 'pUl3fRSXb7Ko0s9aFjBfkat9zd5YaBeE', api: codeApi2 },
-  { type: 'jdcrazyjoy', code: 'ClVWeUlyRAlf-tkrMjPAZQ==', api: codeApi2 }
+  { type: 'jdcrazyjoy', code: 'ClVWeUlyRAlf-tkrMjPAZQ==', api: codeApi2 },
   { type: 'jdcrazyjoy', code: 'U8JG4Hld01a5ZBe4TYLxNA==', api: codeApi2 },
   { type: 'jdcrazyjoy', code: 'FN3KqV95xi94ZMqbzq_1Wg==', api: codeApi2 }
 ]
@@ -111,7 +111,7 @@ async function sendCodes(item) {
           console.log(`【状态】${data.code}\n`);
           console.log(`【Message】${msg}\n`);
 
-          notify.sendNotify(`【type】${item.type}\n`, `【Message】${msg}\n`);
+          //notify.sendNotify(`【type】${item.type}\n`, `【Message】${msg}\n`);
         }
       } catch (e) {
         $.logErr(e, resp);
