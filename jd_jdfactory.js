@@ -53,7 +53,7 @@ if ($.isNode()) {
 }
 let wantProduct = ``;//心仪商品名称
 const JD_API_HOST = 'https://api.m.jd.com/client.action';
-const inviteCodes = [`P04z54XCjVWnYaS5u2ak7ZCdan1Bdd2GGiWvC6_uERj`, 'P04z54XCjVWnYaS5m9cZ2ariXVJwHf0bgkG7Uo'];
+const inviteCodes = [`20N3vpb8SJ8IhP9KM6hbjA==@HJYZUd7F4k9UBbmhECgjQw==@FIZRGWBsoKZ1KbIkVqob7w==@ms7qpHyK_Wf4WmI3Cv4JxQ==`, '20N3vpb8SJ8IhP9KM6hbjA==@HJYZUd7F4k9UBbmhECgjQw==@FIZRGWBsoKZ1KbIkVqob7w==@ms7qpHyK_Wf4WmI3Cv4JxQ=='];
 !(async () => {
   await requireConfig();
   if (!cookiesArr[0]) {
@@ -654,7 +654,7 @@ function shareCodesFormat() {
       const tempIndex = $.index > inviteCodes.length ? (inviteCodes.length - 1) : ($.index - 1);
       $.newShareCodes = inviteCodes[tempIndex].split('@');
     }
-    const readShareCodeRes = await readShareCode();
+    const readShareCodeRes = null;//await readShareCode();
     if (readShareCodeRes && readShareCodeRes.code === 200) {
       $.newShareCodes = [...new Set([...$.newShareCodes, ...(readShareCodeRes.data || [])])];
     }
