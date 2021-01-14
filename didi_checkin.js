@@ -601,6 +601,7 @@ function GetWoolActivity(ticket, groupId, actId='NaN', appId='common'){
   return new Promise((resolve) =>{
     try{
       let ts = new Date().getTime();
+      let groupId= "4503600478896268"
       let options = {
         'url': `https://bosp-api.xiaojukeji.com/wechat/lucina/activity?ts=${ts}&app_id=${appId}&group_id=${groupId}&act_id=${actId}&ticket=${ticket}`,
         'headers': {
