@@ -601,7 +601,6 @@ function GetWoolActivity(ticket, groupId, actId='NaN', appId='common'){
   return new Promise((resolve) =>{
     try{
       let ts = new Date().getTime();
-      let groupId= "4503600478896268"
       let options = {
         'url': `https://bosp-api.xiaojukeji.com/wechat/lucina/activity?ts=${ts}&app_id=${appId}&group_id=${groupId}&act_id=${actId}&ticket=${ticket}`,
         'headers': {
@@ -857,7 +856,7 @@ function CollectWools(index, actId, ticket, appId='common'){
     let sysMsg = ''; // 系统消息
     let cityId = process.env.DIDI_CITY; //magicJS.read(didiCityIdKey); process.env.DIDI_CITY //
     let token = process.env.DIDI_TOKEN; //magicJS.read(didiTokenKey); process.env.DIDI_TOKEN //
-    let groupId = process.env.DIDI_GROUP_ID;//magicJS.read(didiGroupIdKey);
+    let groupId = "4503600478896268";//magicJS.read(didiGroupIdKey);
     let lotteryId = process.env.DIDI_LOT_KEY ;//magicJS.read(didiLotteryKey) || '41h93p17';
     let financeChannelId = process.env.DIDI_CHANNEL || '5286158810015504';//magicJS.read(didiFinanceChannelIdKey) || '5286158810015504'
     let financeActivityId = process.env.DIDI_ACTIVITY	 || '140737579736652';//magicJS.read(didiFinanceActivityIdKey) || '140737579736652';
