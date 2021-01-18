@@ -23,13 +23,14 @@ DREAM_FACTORY_SHARE_CODES = ["20N3vpb8SJ8IhP9KM6hbjA==","HJYZUd7F4k9UBbmhECgjQw=
 # JXNC_SHARECODES 京喜农场
 JXNC_SHARECODES = ["da605ee5b49922f4d4712a4a8cba3c81", "7b448651deaa6961acef14df1a1992f0", "8083811242d4af8c2e372428305d20ec", "3802dd1c5530d56f725eaf52ad7b144b", "9f971f89687ff726c38f45048397b850","6ea805f5f2aaaf44f794003f5c6ca28a"]
 
-
 # BOOKSHOP_SHARECODES 京东书店互助码
 BOOKSHOP_SHARECODES = ["8eb53dac38ed40e19e774f4b645d85dc","2459a795aa10401ca275ba63850149d9", "47f0f1b272ba49cd8d4a94cc7fcd5402", "56a1062272b4436c874642d5848bb83c","f301d6af98044b97973a80bc0e28f793"]#, "e291f37b47ef44dba9e89dbcf612110c"]
 # JD_CASH_SHARECODES 签到现金
 JD_CASH_SHARECODES = ["eU9Ya-7mb651823UznQRhA", "eU9YMq7aNa5yrBiBoyVM","Ihg-bOWxYvUj9Gm6iw", "ZE9wPprjEKNehCamshE", "cEPi7ERl_XU"]
 # JDNIAN_SHARECODES 京东年兽
 JDNIAN_SHARECODES = ["cgxZdTXtI7iO41yaCgao6iJBs_iY8GzLPSF33Ak8VvvDtaHzV8ARHt9AL6U","cgxZdTXteviyuVydVXP9h_LWwhZn4nqryKYaJsBUaAM3di2m7FtItbY","cgxZLmKLJLPZ7gfMDQLGr3TW0we1LXD5EIMWlBWTU6qalOoo0g","cgxZaDXFdsyLnFGxfU3alsEEPaSG-1AukgU9SvlKbNORJh_9ye6G","cgxZfDlXpBINcYeFRGauvnSdL5P1obMGuA"]
+# JD_NH 京东年货
+JD_NH = ["76334f8e9ecb4a1cabafaf75a096e838","18205e114ce94bfd811122f89131df96","3b8618b10a0d4f6380b53b8dc69e09ef","8a1193d8419c41d59a28a472f8480e99","fedec8a64af04bd0b1ecec129dbd78a3"]
 
 
 
@@ -53,12 +54,13 @@ others_jx_fruit = ["ac0849bec91ac2271079b3a80d420ef7"]
 others_jd_book = []
 others_jd_cash = []
 others_jd_nian = []
+others_jd_nh = []
 
 
     
 def gen_help(name, want,others):
     print(name)
-    split_code = "@"
+    split_code = "&"
     length = len(want)
     result = []
     result.append(split_code.join(want))
@@ -83,6 +85,7 @@ def gen_all():
     gen_help("BOOKSHOP_SHARECODES", BOOKSHOP_SHARECODES, others_jd_book)
     gen_help("JD_CASH_SHARECODES", JD_CASH_SHARECODES, others_jd_cash)
     gen_help("JDNIAN_SHARECODES", JDNIAN_SHARECODES, others_jd_nian)
+    gen_help("JD_NH",JD_NH,others_jd_nh)
 
 
 if __name__ == '__main__':
