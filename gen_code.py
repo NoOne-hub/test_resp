@@ -1,9 +1,3 @@
-import requests
-import time
-
-
-
-sess = requests.session()
 # FruitShareCodes 东东农场
 FruitShareCodes = ["93f99381e71140048b67dd3097891506", "15a2b0ab79e647509a07f59696b7b4e2","ca5e3106a24e42f3990da42f4f00c612","765a081119fe4dce917235b0109e29af","f06fd754304748369545872458d7149b"]
 # PLANT_BEAN_SHARECODES 种豆得豆
@@ -58,9 +52,8 @@ others_jd_nh = []
 
 
     
-def gen_help(name, want,others):
+def gen_help(name, want,others,split_code="@"):
     print(name)
-    split_code = "&"
     length = len(want)
     result = []
     result.append(split_code.join(want))
@@ -73,21 +66,22 @@ def gen_help(name, want,others):
         
 
 
-def gen_all():
-    gen_help("FruitShareCodes", FruitShareCodes, others_fruit)  
-    gen_help("PLANT_BEAN_SHARECODES", PLANT_BEAN_SHARECODES, others_bean) 
-    gen_help("DDFACTORY_SHARECODES",DDFACTORY_SHARECODES, others_dd_factory)
-    gen_help("JDZZ_SHARECODES",JDZZ_SHARECODES,others_jd_zz)
-    gen_help("JDJOY_SHARECODES",JDJOY_SHARECODES,others_jd_joy)
-    gen_help("PETSHARECODES",PETSHARECODES,others_pet)
-    gen_help("DREAM_FACTORY_SHARE_CODES",DREAM_FACTORY_SHARE_CODES,others_dr_factory)
-    gen_help("JXNC_SHARECODES", JXNC_SHARECODES, others_jx_fruit)
-    gen_help("BOOKSHOP_SHARECODES", BOOKSHOP_SHARECODES, others_jd_book)
-    gen_help("JD_CASH_SHARECODES", JD_CASH_SHARECODES, others_jd_cash)
-    gen_help("JDNIAN_SHARECODES", JDNIAN_SHARECODES, others_jd_nian)
-    gen_help("JD_NH",JD_NH,others_jd_nh)
+def gen_all(split_code):
+    gen_help("FruitShareCodes", FruitShareCodes, others_fruit, split_code)  
+    gen_help("PLANT_BEAN_SHARECODES", PLANT_BEAN_SHARECODES, others_bean, split_code) 
+    gen_help("DDFACTORY_SHARECODES",DDFACTORY_SHARECODES, others_dd_factory, split_code)
+    gen_help("JDZZ_SHARECODES",JDZZ_SHARECODES,others_jd_zz, split_code)
+    gen_help("JDJOY_SHARECODES",JDJOY_SHARECODES,others_jd_joy, split_code)
+    gen_help("PETSHARECODES",PETSHARECODES,others_pet, split_code)
+    gen_help("DREAM_FACTORY_SHARE_CODES",DREAM_FACTORY_SHARE_CODES,others_dr_factory,split_code)
+    gen_help("JXNC_SHARECODES", JXNC_SHARECODES, others_jx_fruit,split_code)
+    gen_help("BOOKSHOP_SHARECODES", BOOKSHOP_SHARECODES, others_jd_book,split_code)
+    gen_help("JD_CASH_SHARECODES", JD_CASH_SHARECODES, others_jd_cash,split_code)
+    gen_help("JDNIAN_SHARECODES", JDNIAN_SHARECODES, others_jd_nian,split_code)
+    gen_help("JD_NH",JD_NH,others_jd_nh,split_code)
 
 
 if __name__ == '__main__':
-    gen_all()
+    gen_all("@")
+    gen_all("&")
     
