@@ -8,9 +8,9 @@ on:
   schedule:
     - cron: '40 * * * *'
   watch:
-    types: [started]
+    types: started
   repository_dispatch:
-    types: watch
+    types: axc
 jobs:
   build:
 
